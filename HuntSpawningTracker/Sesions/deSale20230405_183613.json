@@ -1,0 +1,66 @@
+{
+  "Name": "DeSale",
+  "Locations": [
+    {
+      "Id": 0,
+      "NumberOfSpawns": 1,
+      "Name": "Fuerte Bolden"
+    },
+    {
+      "Id": 1,
+      "NumberOfSpawns": 0,
+      "Name": "Astillero de Darin"
+    },
+    {
+      "Id": 2,
+      "NumberOfSpawns": 0,
+      "Name": "Cantera Reeves"
+    },
+    {
+      "Id": 3,
+      "NumberOfSpawns": 0,
+      "Name": "DeSalle bajo"
+    },
+    {
+      "Id": 4,
+      "NumberOfSpawns": 0,
+      "Name": "DeSalle alto"
+    },
+    {
+      "Id": 5,
+      "NumberOfSpawns": 0,
+      "Name": "Serreria de Ash Creek"
+    },
+    {
+      "Id": 6,
+      "NumberOfSpawns": 0,
+      "Name": "Plantaci\u00F3n La Perla"
+    },
+    {
+      "Id": 7,
+      "NumberOfSpawns": 0,
+      "Name": "Granja porcina"
+    },
+    {
+      "Id": 8,
+      "NumberOfSpawns": 0,
+      "Name": "Carbonera Stanley"
+    },
+    {
+      "Id": 9,
+      "NumberOfSpawns": 0,
+      "Name": "Mina de Kingsnake"
+    },
+    {
+      "Id": 10,
+      "NumberOfSpawns": 0,
+      "Name": "Granja avicola Moses"
+    },
+    {
+      "Id": 11,
+      "NumberOfSpawns": 0,
+      "Name": "Finca Seven Sisters"
+    }
+  ],
+  "MapOccurrences": 0
+}
