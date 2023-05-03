@@ -9,17 +9,21 @@ using System.Threading.Tasks;
 
 namespace HuntSpawningTracker
 {
+    //Klasa Map odpowiada za zarzadzanie pojedyńczą mapą
     internal class Map
     {
         public string Name { get; set; }
+        public int Id { get; set; }
         public int MapOccurrences { get; set; } //number of spawns in this map
         public List<Location> Locations { get; set; }
         
 
-        public Map(string mapName)
+        public Map(string mapName, int mapId)
         {
             Name = mapName;
             Locations = new List<Location>();
+            Id = mapId;
+            MapOccurrences = default;
         }
         //--- METODY
         public int GetNumberOfLocations()
@@ -36,30 +40,32 @@ namespace HuntSpawningTracker
         }
         public void DisplayLocations()
         {
-            Console.WriteLine($"ID\tLocation Name");
+            Console.WriteLine($"ID\tLocation Name: wystapienia");
             foreach (var item in Locations)
             {
-                Console.WriteLine($"{item.Id}\t{item.Name}");
+                Console.WriteLine($"{item.Id}\t{item.Name}: {item.LocationOccurrences}");
             }
         }
-        public void DisplaySpawnNumbers()
+        public void GetSpawnNumbers()
         {
             Console.WriteLine($"ID\tLocation Name");
             foreach (var item in Locations)
             {
-                Console.WriteLine($"{item.Name}:{item.NumberOfSpawns}");
+                Console.WriteLine($"{item.Name}:{item.LocationOccurrences}");
             }
         }
-        public void IncreaseSpawnCounter(string locationId)
+        public void IncrementMapOccurencess(int locationId)
         {
-            var tempLocation = Locations.FirstOrDefault(x => x.Id == Convert.ToInt32(locationId));
-
-            if (tempLocation != null)
+            MapOccurrences++;
+        }
+        public int GetTotalSpawnsOnMap()
+        {
+            int temp = default;
+            foreach(var item in Locations)
             {
-                tempLocation.NumberOfSpawns++;
-                Console.WriteLine("Spawn w tej lokacji +1");
+                temp += item.LocationOccurrences;
             }
-            else Console.WriteLine($"Lokacja o ID {locationId} nie zostala znaleziona");
+            return temp;
         }
     }
 }

@@ -3,36 +3,52 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Text.Json;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace HuntSpawningTracker
 {
     internal class FilesManagement
     {
-        //pobiera lokalizacje do txt zawierajacych lokacje
-        public static string GetPath2Names()
+        public static string GetPath2MapsFolder()
         {
-            string currentdirectory = Directory.GetCurrentDirectory();//aktualna sciezka projektu
-            System.Text.StringBuilder? pathBuilder = new System.Text.StringBuilder();//sciezka
-            pathBuilder.Append(Directory.GetParent(currentdirectory)!.Parent!.Parent!.FullName).Append("\\Locations\\Locations-DeSalle.txt");
+            System.Text.StringBuilder? pathBuilder = new System.Text.StringBuilder();//sciezka, uzycie stringbuildera nie jest przemyslane
+            pathBuilder.Append(GetDirectoryPath()).Append("\\Locations");
             string path = pathBuilder.ToString();
             return path;
         }
-
-        //zapisuje
-        public static void SaveSession(Map MapForSerialization)
+        public static string[] GetAllMapsPaths(string path)
         {
-            string jsonString = JsonSerializer.Serialize(MapForSerialization);
+            string[] fileNames = Directory.GetFiles(path, "*.txt");
 
-            Console.WriteLine(jsonString);
+            return fileNames;
+        }
+        public static void SaveSession(Maps MapsForSerialization)
+        {
+            JsonSerializerOptions options = new JsonSerializerOptions
+            {
+                DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingDefault,
+                IncludeFields = true,
+                WriteIndented = true
+            };
 
-            string path = "C:\\visual projects\\HuntSpawningTracker\\HuntSpawningTracker\\Sesions" + "\\deSale" + DateTime.Now.ToString("yyyyMMdd_HHmmss") + ".json";
-            File.WriteAllText(path, jsonString);
+            string serializedSesion = JsonSerializer.Serialize(MapsForSerialization,options);
+            Console.WriteLine(serializedSesion);
+
+            System.Text.StringBuilder? path = new System.Text.StringBuilder();
+            path.Append(GetDirectoryPath()).Append("\\Sesions").Append("\\sesion_").Append(DateTime.Now.ToString("yyyyMMdd_HHmmss")).Append(".json");
+
+            File.WriteAllText(path.ToString(), serializedSesion);
 
             Console.WriteLine("Serialization zakonczona.");
         }
-
-
-
+        public static string GetAllLinesInTxtFile(string path)
+        {
+            return File.ReadAllText(path);
+        }
+        public static string GetDirectoryPath()
+        {
+            return Directory.GetParent(Directory.GetCurrentDirectory())!.Parent!.Parent!.FullName;
+        }
     }
 }

@@ -1,0 +1,161 @@
+{
+  "Allmaps": [
+    {
+      "Name": "DeSalle",
+      "MapOccurrences": 1,
+      "Locations": [
+        {
+          "Name": "Fuerte Bolden"
+        },
+        {
+          "Name": "Astillero de Darin",
+          "Id": 1
+        },
+        {
+          "Name": "Cantera Reeves",
+          "Id": 2,
+          "LocationOccurrences": 1
+        },
+        {
+          "Name": "DeSalle bajo",
+          "Id": 3
+        },
+        {
+          "Name": "DeSalle alto",
+          "Id": 4
+        },
+        {
+          "Name": "Serreria de Ash Creek",
+          "Id": 5
+        },
+        {
+          "Name": "Plantaci\u00F3n La Perla",
+          "Id": 6
+        },
+        {
+          "Name": "Granja porcina",
+          "Id": 7
+        },
+        {
+          "Name": "Carbonera Stanley",
+          "Id": 8
+        },
+        {
+          "Name": "Mina de Kingsnake",
+          "Id": 9
+        },
+        {
+          "Name": "Granja avicola Moses",
+          "Id": 10
+        },
+        {
+          "Name": "Finca Seven Sisters",
+          "Id": 11
+        }
+      ]
+    },
+    {
+      "Name": "LawsonDelta",
+      "Id": 1,
+      "MapOccurrences": 2,
+      "Locations": [
+        {
+          "Name": "Wolfshead Arsenal"
+        },
+        {
+          "Name": "Bradley \u0026 Craven Brickworks",
+          "Id": 1,
+          "LocationOccurrences": 1
+        },
+        {
+          "Name": "C\u0026A Lumber",
+          "Id": 2
+        },
+        {
+          "Name": "Hemlock and Hide",
+          "Id": 3,
+          "LocationOccurrences": 1
+        },
+        {
+          "Name": "Windy Run",
+          "Id": 4
+        },
+        {
+          "Name": "Salter\u0027s Pork",
+          "Id": 5
+        },
+        {
+          "Name": "Golden Acres",
+          "Id": 6
+        },
+        {
+          "Name": "Blanc Brinery",
+          "Id": 7
+        },
+        {
+          "Name": "Godard Docks",
+          "Id": 8
+        },
+        {
+          "Name": "Maw Battery",
+          "Id": 9
+        },
+        {
+          "Name": "Iron Works",
+          "Id": 10
+        }
+      ]
+    },
+    {
+      "Name": "StillwaterBayou",
+      "Id": 2,
+      "MapOccurrences": 1,
+      "Locations": [
+        {
+          "Name": "Cyprus Huts",
+          "LocationOccurrences": 1
+        },
+        {
+          "Name": "Davant Ranch",
+          "Id": 1
+        },
+        {
+          "Name": "The Slaughterhouse",
+          "Id": 2
+        },
+        {
+          "Name": "Catfish Grove",
+          "Id": 3
+        },
+        {
+          "Name": "Stillwater Bend",
+          "Id": 4
+        },
+        {
+          "Name": "The Chapel of Madonna Noire",
+          "Id": 5
+        },
+        {
+          "Name": "Scupper Lake",
+          "Id": 6
+        },
+        {
+          "Name": "Port Reeker",
+          "Id": 7
+        },
+        {
+          "Name": "Reynard Mill \u0026 Lumber",
+          "Id": 8
+        },
+        {
+          "Name": "Alain \u0026 Son\u0027s Fish",
+          "Id": 9
+        },
+        {
+          "Name": "Blanchett Graves",
+          "Id": 10
+        }
+      ]
+    }
+  ]
+}
