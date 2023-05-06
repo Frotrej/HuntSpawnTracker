@@ -8,16 +8,22 @@ namespace HuntSpawningTracker
 {
     internal class Location
     {
-        public int Id { get; set; }
-        public int NumberOfSpawns { get; set; } //number of spawns in this location
         public string Name { get; set; }
+        public int Id { get; set; }
+        public int LocationOccurrences { get; set; }
+        
 
         public Location(string locationName,int id)
         {
             Id = id;
-            NumberOfSpawns = 0;
+            LocationOccurrences = 0;
             Name = locationName;
         }
         //--- METODY
+        public void IncreaseNumberOfSpawns()
+        {
+            LocationOccurrences++;
+            Console.WriteLine($"Spawn w tej lokacji +1.\nAktualnie {LocationOccurrences} wystapien.");
+        }
     }
 }
