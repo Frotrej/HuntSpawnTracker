@@ -5,8 +5,11 @@ Data Access Logic
 - EF Migrations
 - EF DbContext and model design
 
-### Core
+### Core <-- Aktualnie nie potrzebne>
 - Application Entry Point and Configuration like appsettings, Startup.cs, Program.cs
+
+### App
+- Application operations
 
 ### Services
 - Interfaces and implementations like ISmsSender, IEmailSender
