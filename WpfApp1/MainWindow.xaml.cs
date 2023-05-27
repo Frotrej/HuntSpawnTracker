@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WpfApp1.Infrastructure;
 
 namespace WpfApp1
 {
@@ -20,9 +21,17 @@ namespace WpfApp1
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow()
+        private readonly HuntContext _dbContext;
+
+        public MainWindow(HuntContext dbContext)
         {
+            _dbContext = dbContext;
             InitializeComponent();
+            GetMaps();
+        }
+        private void GetMaps()
+        {
+            var maps = _dbContext.Maps.ToList();
         }
     }
 }
